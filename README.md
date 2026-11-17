@@ -35,11 +35,10 @@ hors-ligne (l'adresse locale `http://<IP-du-PC>:8137` ne le permet pas).
 2. Dans ce dossier, depuis WSL :
    ```bash
    git init && git add . && git commit -m "Série 1"
-   git branch -M main
    git remote add origin https://github.com/<ton-pseudo>/serie1.git
-   git push -u origin main
+   git push -u origin master
    ```
-3. Sur GitHub : **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
+3. Sur GitHub : **Settings → Pages → Deploy from a branch → `master` / `(root)`**.
 4. Après une minute, l'app est sur `https://<ton-pseudo>.github.io/serie1/`.
 
 Ensuite, chaque `git push` met l'app à jour (le service worker est en « réseau
