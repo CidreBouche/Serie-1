@@ -1,0 +1,15 @@
+# --- Privé : tout ce qui n'a rien à faire dans un dépôt public ---
+# Contexte perso, brief initial, vraies données (voir private/README.md).
+private/
+
+# Filets de sécurité si des données sont générées ailleurs par erreur
+tools/carnet.csv
+tools/*.json
+serie1-sauvegarde-*.json
+serie1-series-*.csv
+serie1-donnees*.json
+
+# --- Local / outils ---
+.claude/
+__pycache__/
+*.pyc

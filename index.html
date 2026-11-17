@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#0e1118" />
+  <title>Série 1 — Suivi muscu</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon-180.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Série 1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div id="app" class="app-root">
+    <div class="boot">Chargement…</div>
+  </div>
+  <!-- Garde-fou : une PWA (modules ES + service worker) ne fonctionne pas en file://.
+       Ce script classique s'exécute même quand les modules sont bloqués. -->
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('app').innerHTML =
+        '<div class="boot" style="text-align:left;max-width:420px;margin:40px auto;line-height:1.6">' +
+        '<h2 style="color:#38bdf8;margin:0 0 12px">Ouvre l’app via un serveur, pas en fichier</h2>' +
+        '<p>Cette app utilise des modules JavaScript et un service worker, que les navigateurs bloquent en <code>file://</code>. C’est pour ça que l’écran reste vide.</p>' +
+        '<p style="margin-top:16px"><strong>Lance plutôt&nbsp;:</strong></p>' +
+        '<pre style="background:#171b24;border:1px solid #2a3140;border-radius:10px;padding:12px;overflow:auto">cd forme_physique/app\npython3 -m http.server 8137</pre>' +
+        '<p>puis ouvre <a style="color:#38bdf8" href="http://localhost:8137">http://localhost:8137</a></p>' +
+        '</div>';
+    }
+  </script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
