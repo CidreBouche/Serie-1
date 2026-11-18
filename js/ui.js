@@ -173,7 +173,7 @@ function syncPanel() {
   ]);
 
   if (!s.configured) {
-    panel.appendChild(el('p', { class: 'muted small' }, 'Pas encore configurée. La synchro enregistre tes données dans un fichier de ton Google Drive et les partage entre ton téléphone et ton ordinateur. Il faut d’abord créer un identifiant Google (une fois, ~10 min) : voir le README, section « Synchronisation Google Drive ».'));
+    panel.appendChild(el('p', { class: 'muted small' }, 'Pas encore configurée. La synchro enregistre tes données dans un fichier de ton Google Drive et les partage entre ton téléphone et ton ordinateur. Il faut d’abord créer un identifiant Google (une fois, ~10 min) : voir le manuel, chapitre « Mettre l’app en ligne » (manuel/01-mise-en-place.md).'));
     panel.appendChild(idForm);
     return panel;
   }

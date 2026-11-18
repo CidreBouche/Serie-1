@@ -16,7 +16,7 @@ série**, indépendamment des autres séries.
 
 ## Stack
 JS vanilla en modules ES, sans build ni Node. Test : `python3 -m http.server 8137`.
-Architecture et arborescence : `README.md`. Guide utilisateur : `MANUEL.md`.
+Architecture et arborescence : `README.md`. Guide utilisateur : `manuel/` (un .md par chapitre).
 
 ## Invariants
 - Écrire en base uniquement via `db.put` / `db.del` (horodatage + traces de
